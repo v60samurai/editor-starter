@@ -47,9 +47,9 @@ editor-starter/
     └── PERSONALIZATION.md             ← the spine-vs-variation contract; agent trigger for the build
 ```
 
-This kit is **documentation-first by design**. No app code is checked in. The four documents (`docs/PRD.md`, `docs/BRAND.md`, `docs/PERSONALIZATION.md`, plus a filled-in Implementation Guide from the companion templates pack) are everything Claude Code needs to generate the Next.js app session by session.
+This kit is **documentation-first by design**. No app code is checked in. The four documents (`docs/PRD.md`, `docs/BRAND.md`, `docs/PERSONALIZATION.md`, plus a filled-in Implementation Guide from [builder-os](https://github.com/v60samurai/builder-os)) are everything Claude Code needs to generate the Next.js app session by session.
 
-**Blank templates** — the PRD template, the brand-guide template, and the three-document implementation-templates set (`IMPLEMENTATION_GUIDE.md`, `SESSION_PLAYBOOK.md`, `FINAL_PUSH.md`) — ship as a **separate companion templates pack**. Get the link from the release notes or ping [@v60samurai](https://github.com/v60samurai).
+**Blank templates** — the PRD template, the brand-guide template, and the three-document implementation-templates set (`IMPLEMENTATION_GUIDE.md`, `SESSION_PLAYBOOK.md`, `FINAL_PUSH.md`) — ship in **[builder-os](https://github.com/v60samurai/builder-os)**, the companion repo.
 
 `docs/` is one product (Editor) filled in. **`docs/PERSONALIZATION.md` is what makes your fork look nothing like anyone else's** — read it before you start.
 
@@ -60,9 +60,9 @@ This kit is **documentation-first by design**. No app code is checked in. The fo
 1. **Copy this directory into a fresh repo.** `cp -R editor-starter ../my-editor && cd ../my-editor && git init`.
 2. **Read the worked example.** Open `docs/PRD.md`, then `docs/BRAND.md`. This shows you what good looks like.
 3. **Run the Personalization Pre-Flight.** Open `docs/PERSONALIZATION.md` Section 5. Ten minutes. Skip this and your fork will look like everyone else's.
-4. **Spin your own PRD.** Overwrite `docs/PRD.md` with your own — use the blank PRD template from the companion templates pack, or mirror the structure of the Editor PRD. Decision Rationale rule applies: every non-obvious choice gets a one-line defense.
-5. **Spin your own brand guide.** Overwrite `docs/BRAND.md` with your own — use the blank brand-guide template from the companion templates pack. Fill in five sections minimum for v1.
-6. **Generate the implementation pack — point Claude Code at `docs/PERSONALIZATION.md` first.** The Agent Instructions in Section 6 tell the agent how to pull your taste from `~/.claude/CLAUDE.md` into the Implementation Guide. Then run [Shipwright](https://github.com/v60samurai/shipwright) on your PRD, or fill the three implementation-templates files (`IMPLEMENTATION_GUIDE.md`, `SESSION_PLAYBOOK.md`, `FINAL_PUSH.md`) from the companion pack by hand.
+4. **Spin your own PRD.** Overwrite `docs/PRD.md` with your own — use the blank PRD template from [builder-os](https://github.com/v60samurai/builder-os), or mirror the structure of the Editor PRD. Decision Rationale rule applies: every non-obvious choice gets a one-line defense.
+5. **Spin your own brand guide.** Overwrite `docs/BRAND.md` with your own — use the blank brand-guide template from [builder-os](https://github.com/v60samurai/builder-os). Fill in five sections minimum for v1.
+6. **Generate the implementation pack — point Claude Code at `docs/PERSONALIZATION.md` first.** The Agent Instructions in Section 6 tell the agent how to pull your taste from `~/.claude/CLAUDE.md` into the Implementation Guide. Then run [Shipwright](https://github.com/v60samurai/shipwright) on your PRD, or fill the three implementation-templates files (`IMPLEMENTATION_GUIDE.md`, `SESSION_PLAYBOOK.md`, `FINAL_PUSH.md`) from [builder-os](https://github.com/v60samurai/builder-os) by hand.
 7. **Hand the four documents to Claude Code.** Build the product session by session.
 8. **Run the Personalization Audit before shipping.** Five questions in `docs/PERSONALIZATION.md` Section 7. Pass all five or iterate.
 
@@ -107,7 +107,7 @@ The three core features are unchanged from the workshop. Auth + memory are the t
 - **Email**: Resend (swap to any SMTP via `src/lib/email.ts`)
 - **Deploy**: Vercel
 
-The full architecture and the schema scaffolds live in the Implementation Guide template (companion templates pack) — fill it in for your fork.
+The full architecture and the schema scaffolds live in the Implementation Guide template (in [builder-os](https://github.com/v60samurai/builder-os)) — fill it in for your fork.
 
 ---
 
@@ -131,7 +131,7 @@ This kit is meant to be **forked**, not maintained as a shared codebase. The exp
 3. If you discover an improvement to the **spine** (auth, memory, agentic patterns, deploy story), open a PR back here.
 4. If you discover an improvement to a **slot** (your persona, your tools, your studio mood), keep it in your fork. That is by design — variations stay personal.
 
-PRs that touch `docs/PERSONALIZATION.md` are especially welcome. Templates-pack PRs go to the companion repo (linked in the release notes).
+PRs that touch `docs/PERSONALIZATION.md` are especially welcome. Templates-pack PRs go to [builder-os](https://github.com/v60samurai/builder-os).
 
 ---
 
@@ -143,7 +143,7 @@ MIT — see `LICENSE`. Use it, fork it, sell what you build with it. Attribution
 
 ## Credits
 
-Built by [Harshit Badiger](https://github.com/v60samurai). Spun out of Part 2 of Rethink enablement. The three-document Shipwright workflow (Implementation Guide, Session Playbook, Final Push) that ships in the companion templates pack was first published at <https://github.com/v60samurai/shipwright>.
+Built by [Harshit Badiger](https://github.com/v60samurai). Spun out of Part 2 of Rethink enablement. The three-document Shipwright workflow (Implementation Guide, Session Playbook, Final Push) that ships in [builder-os](https://github.com/v60samurai/builder-os) was first published at <https://github.com/v60samurai/shipwright>.
 
 ---
 

@@ -13,7 +13,7 @@ This kit distinguishes the **spine** (load-bearing wiring everyone shares) from 
 - [ ] Spine: improves auth, memory, agentic patterns, the deploy story, or `docs/PERSONALIZATION.md`
 - [ ] Slot variation: my own persona, tools, studio mood, microcopy — keeping in my fork, not opening this PR
 - [ ] Documentation fix: typos, broken refs, clarifications
-- [ ] Companion templates pack change: opening against the separate templates repo instead
+- [ ] builder-os change: opening against [builder-os](https://github.com/v60samurai/builder-os) instead
 
 ## How to verify
 

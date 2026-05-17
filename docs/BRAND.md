@@ -2,12 +2,12 @@
 
 > Editorial workshop. Three-column layout. The brand bends to the persona you pick.
 
-This is the **mini** brand guide for Editor. Five sections from the full brand-guide template (companion templates pack — see the README for the link).
+This is the **mini** brand guide for Editor. Five sections from the full brand-guide template in [builder-os](https://github.com/v60samurai/builder-os) — the companion repo.
 
 For Editor, the brand serves a special role: each forker picks a studio mood (Strunk, Pitchfork, Mentor, or their own) and Stitch generates tokens that match that mood. So the brand here describes the **spine of the brand** (the rules that apply across all studios) and leaves the **studio-specific visual** to each forker.
 
 **Source PRD**: `./PRD.md`
-**Generated from**: a partial fill of the full brand-guide template (companion templates pack)
+**Generated from**: a partial fill of the full brand-guide template (in [builder-os](https://github.com/v60samurai/builder-os))
 **Owner**: Harshit Badiger
 **Last updated**: 2026-05-17
 
@@ -107,4 +107,4 @@ For Editor today, Stitch generates the per-studio tokens live during the build a
 
 ---
 
-*Editor BRAND.md v2, Harshit Badiger, 2026-05-17. The PRD is at `./PRD.md`. The Implementation Guide template ships in the companion templates pack.*
+*Editor BRAND.md v2, Harshit Badiger, 2026-05-17. The PRD is at `./PRD.md`. The Implementation Guide template ships in [builder-os](https://github.com/v60samurai/builder-os).*

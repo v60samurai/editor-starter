@@ -50,7 +50,7 @@ Taste is not a one-time decision; it propagates through the artefacts. Here is w
 |---|---|---|
 | Discovery | `docs/PRD.md` | The framing of the problem, the verbs you use, the level of confidence tagging, the way exclusions are phrased |
 | Brand | `docs/BRAND.md` | The visual mood, the typography rule strictness, the microcopy register |
-| Implementation | `IMPLEMENTATION_GUIDE.md` (filled-in; template ships in the companion templates pack) | The stack choices, naming conventions, file structure, test discipline, comment philosophy |
+| Implementation | `IMPLEMENTATION_GUIDE.md` (filled-in; template ships in [builder-os](https://github.com/v60samurai/builder-os)) | The stack choices, naming conventions, file structure, test discipline, comment philosophy |
 | Runtime persona | `src/persona/CLAUDE.md` | The voice the critique speaks in: warm vs cutting, terse vs lyrical, hedging vs declarative |
 | Runtime corpus | `src/corpus/voice-samples.md` | Few-shot examples that anchor the voice in actual writing you have done |
 
@@ -111,7 +111,7 @@ For each of the six personalization slots in Section 4 above, propose a first pa
 
 ### Step C — Generate the Implementation Guide
 
-Fill the Implementation Guide template (from the companion templates pack) using the stack preferences extracted in Step A. Where the template offers a default (e.g. "PostgreSQL" or "Lucia"), check whether the forker's global names a different choice and substitute if so. Where the template asks for a comment-style or test-style decision, mirror the forker's stated rules verbatim.
+Fill the Implementation Guide template (from [builder-os](https://github.com/v60samurai/builder-os)) using the stack preferences extracted in Step A. Where the template offers a default (e.g. "PostgreSQL" or "Lucia"), check whether the forker's global names a different choice and substitute if so. Where the template asks for a comment-style or test-style decision, mirror the forker's stated rules verbatim.
 
 ### Step D — Draft the persona file
 
