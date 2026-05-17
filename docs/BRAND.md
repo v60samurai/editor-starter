@@ -2,12 +2,12 @@
 
 > Editorial workshop. Three-column layout. The brand bends to the persona you pick.
 
-This is the **mini** brand guide for Editor. Five sections from the full template at `../templates/brand-guide-template.md`.
+This is the **mini** brand guide for Editor. Five sections from the full brand-guide template (companion templates pack — see the README for the link).
 
 For Editor, the brand serves a special role: each forker picks a studio mood (Strunk, Pitchfork, Mentor, or their own) and Stitch generates tokens that match that mood. So the brand here describes the **spine of the brand** (the rules that apply across all studios) and leaves the **studio-specific visual** to each forker.
 
 **Source PRD**: `./PRD.md`
-**Generated from**: a partial fill of `../templates/brand-guide-template.md`
+**Generated from**: a partial fill of the full brand-guide template (companion templates pack)
 **Owner**: Harshit Badiger
 **Last updated**: 2026-05-17
 
@@ -88,7 +88,7 @@ The base palette is the same warm-paper editorial system Coach uses. Each studio
 
 ## What is intentionally not in this mini guide
 
-Sections from `templates/brand/template.md` that we skipped for time and will cover in the separate branding session:
+Sections from the full brand-guide template that we skipped for time and will cover in the separate branding session:
 
 - Surface Declaration
 - Spacing and Shape system
@@ -107,4 +107,4 @@ For Editor today, Stitch generates the per-studio tokens live during the build a
 
 ---
 
-*Editor BRAND.md v2, Harshit Badiger, 2026-05-17. The PRD is at `./PRD.md`. The implementation reference template is at `../templates/implementation-templates/IMPLEMENTATION_GUIDE.md`.*
+*Editor BRAND.md v2, Harshit Badiger, 2026-05-17. The PRD is at `./PRD.md`. The Implementation Guide template ships in the companion templates pack.*

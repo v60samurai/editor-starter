@@ -20,14 +20,17 @@ cd my-editor && rm -rf .git && git init
 # 2. Read the worked example (10 min)
 cat docs/PRD.md docs/BRAND.md docs/PERSONALIZATION.md
 
-# 3. Open Claude Code and paste the build prompt
-#    (See "The one-line build prompt" below)
+# 3. Open Claude Code and paste the build prompt (see below).
+#    Claude Code generates the Next.js app from these docs;
+#    no app code is checked in by design.
 
-# 4. Ship to Vercel
+# 4. Ship to Vercel (after the build sessions complete)
 vercel
 ```
 
 Total time from clone to deployed Editor: **two to three hours** end to end. Forty-five minutes are for the three core agentic features. The rest is auth, memory, history UI, and personalization audit.
+
+> **No global `~/.claude/CLAUDE.md` yet?** Read `docs/PERSONALIZATION.md` Section 8 before you start — the workflow shifts from extraction to interview.
 
 ---
 
@@ -36,23 +39,19 @@ Total time from clone to deployed Editor: **two to three hours** end to end. For
 ```
 editor-starter/
 ├── README.md                          ← you are here
-├── docs/                              ← the worked example: Editor
-│   ├── PRD.md                         ← v2: includes Auth + Memory sections
-│   ├── BRAND.md                       ← the editorial-workshop spine
-│   └── PERSONALIZATION.md             ← the spine-vs-variation contract; agent trigger for the build
-└── templates/                         ← blank templates to spin new products
-    ├── brand-guide-template.md        ← the full brand template
-    ├── prd/
-    │   ├── template-full-depth.md     ← 16-section discovery + solution PRD
-    │   └── template-lean-submission.md← lean PRD for a single-session build
-    └── implementation-templates/      ← Shipwright's three-document system
-        ├── IMPLEMENTATION_GUIDE.md
-        ├── SESSION_PLAYBOOK.md
-        ├── FINAL_PUSH.md
-        └── README.md                  ← the Usage Guide (read this second)
+├── LICENSE
+├── .gitignore
+└── docs/                              ← the worked example: Editor
+    ├── PRD.md                         ← v2: includes Auth + Memory sections
+    ├── BRAND.md                       ← the editorial-workshop spine
+    └── PERSONALIZATION.md             ← the spine-vs-variation contract; agent trigger for the build
 ```
 
-`docs/` is one product (Editor) filled in. `templates/` is the blank kit you use to make another. **`docs/PERSONALIZATION.md` is what makes your fork look nothing like anyone else's** — read it before you start.
+This kit is **documentation-first by design**. No app code is checked in. The four documents (`docs/PRD.md`, `docs/BRAND.md`, `docs/PERSONALIZATION.md`, plus a filled-in Implementation Guide from the companion templates pack) are everything Claude Code needs to generate the Next.js app session by session.
+
+**Blank templates** — the PRD template, the brand-guide template, and the three-document implementation-templates set (`IMPLEMENTATION_GUIDE.md`, `SESSION_PLAYBOOK.md`, `FINAL_PUSH.md`) — ship as a **separate companion templates pack**. Get the link from the release notes or ping [@v60samurai](https://github.com/v60samurai).
+
+`docs/` is one product (Editor) filled in. **`docs/PERSONALIZATION.md` is what makes your fork look nothing like anyone else's** — read it before you start.
 
 ---
 
@@ -61,9 +60,9 @@ editor-starter/
 1. **Copy this directory into a fresh repo.** `cp -R editor-starter ../my-editor && cd ../my-editor && git init`.
 2. **Read the worked example.** Open `docs/PRD.md`, then `docs/BRAND.md`. This shows you what good looks like.
 3. **Run the Personalization Pre-Flight.** Open `docs/PERSONALIZATION.md` Section 5. Ten minutes. Skip this and your fork will look like everyone else's.
-4. **Spin your own PRD.** Copy `templates/prd/template-lean-submission.md` to `docs/PRD.md` (overwrite Editor's). Fill it in. Decision Rationale rule applies: every non-obvious choice gets a one-line defense.
-5. **Spin your own brand guide.** Copy `templates/brand-guide-template.md` to `docs/BRAND.md`. Fill in five sections minimum for v1.
-6. **Generate the implementation pack — point Claude Code at `docs/PERSONALIZATION.md` first.** The Agent Instructions in Section 6 tell the agent how to pull your taste from `~/.claude/CLAUDE.md` into the Implementation Guide. Then run [Shipwright](https://github.com/v60samurai/shipwright) on your PRD, or fill `templates/implementation-templates/{IMPLEMENTATION_GUIDE,SESSION_PLAYBOOK,FINAL_PUSH}.md` by hand. Read `templates/implementation-templates/README.md` for the usage guide.
+4. **Spin your own PRD.** Overwrite `docs/PRD.md` with your own — use the blank PRD template from the companion templates pack, or mirror the structure of the Editor PRD. Decision Rationale rule applies: every non-obvious choice gets a one-line defense.
+5. **Spin your own brand guide.** Overwrite `docs/BRAND.md` with your own — use the blank brand-guide template from the companion templates pack. Fill in five sections minimum for v1.
+6. **Generate the implementation pack — point Claude Code at `docs/PERSONALIZATION.md` first.** The Agent Instructions in Section 6 tell the agent how to pull your taste from `~/.claude/CLAUDE.md` into the Implementation Guide. Then run [Shipwright](https://github.com/v60samurai/shipwright) on your PRD, or fill the three implementation-templates files (`IMPLEMENTATION_GUIDE.md`, `SESSION_PLAYBOOK.md`, `FINAL_PUSH.md`) from the companion pack by hand.
 7. **Hand the four documents to Claude Code.** Build the product session by session.
 8. **Run the Personalization Audit before shipping.** Five questions in `docs/PERSONALIZATION.md` Section 7. Pass all five or iterate.
 
@@ -108,7 +107,7 @@ The three core features are unchanged from the workshop. Auth + memory are the t
 - **Email**: Resend (swap to any SMTP via `src/lib/email.ts`)
 - **Deploy**: Vercel
 
-The full architecture and the schema scaffolds live in `templates/implementation-templates/IMPLEMENTATION_GUIDE.md` — fill it in for your fork.
+The full architecture and the schema scaffolds live in the Implementation Guide template (companion templates pack) — fill it in for your fork.
 
 ---
 
@@ -132,7 +131,7 @@ This kit is meant to be **forked**, not maintained as a shared codebase. The exp
 3. If you discover an improvement to the **spine** (auth, memory, agentic patterns, deploy story), open a PR back here.
 4. If you discover an improvement to a **slot** (your persona, your tools, your studio mood), keep it in your fork. That is by design — variations stay personal.
 
-PRs that touch `docs/PERSONALIZATION.md` or the templates in `templates/` are especially welcome.
+PRs that touch `docs/PERSONALIZATION.md` are especially welcome. Templates-pack PRs go to the companion repo (linked in the release notes).
 
 ---
 
@@ -144,7 +143,7 @@ MIT — see `LICENSE`. Use it, fork it, sell what you build with it. Attribution
 
 ## Credits
 
-Built by [Harshit Badiger](https://github.com/v60samurai). Spun out of Part 2 of Rethink enablement. The three-document Shipwright workflow inside `templates/implementation-templates/` was first published at <https://github.com/v60samurai/shipwright>.
+Built by [Harshit Badiger](https://github.com/v60samurai). Spun out of Part 2 of Rethink enablement. The three-document Shipwright workflow (Implementation Guide, Session Playbook, Final Push) that ships in the companion templates pack was first published at <https://github.com/v60samurai/shipwright>.
 
 ---
 

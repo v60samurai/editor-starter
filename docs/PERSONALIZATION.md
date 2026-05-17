@@ -50,7 +50,7 @@ Taste is not a one-time decision; it propagates through the artefacts. Here is w
 |---|---|---|
 | Discovery | `docs/PRD.md` | The framing of the problem, the verbs you use, the level of confidence tagging, the way exclusions are phrased |
 | Brand | `docs/BRAND.md` | The visual mood, the typography rule strictness, the microcopy register |
-| Implementation | `templates/implementation-templates/IMPLEMENTATION_GUIDE.md` (filled-in) | The stack choices, naming conventions, file structure, test discipline, comment philosophy |
+| Implementation | `IMPLEMENTATION_GUIDE.md` (filled-in; template ships in the companion templates pack) | The stack choices, naming conventions, file structure, test discipline, comment philosophy |
 | Runtime persona | `src/persona/CLAUDE.md` | The voice the critique speaks in: warm vs cutting, terse vs lyrical, hedging vs declarative |
 | Runtime corpus | `src/corpus/voice-samples.md` | Few-shot examples that anchor the voice in actual writing you have done |
 
@@ -111,7 +111,7 @@ For each of the six personalization slots in Section 4 above, propose a first pa
 
 ### Step C — Generate the Implementation Guide
 
-Fill `templates/implementation-templates/IMPLEMENTATION_GUIDE.md` using the stack preferences extracted in Step A. Where the template offers a default (e.g. "PostgreSQL" or "Lucia"), check whether the forker's global names a different choice and substitute if so. Where the template asks for a comment-style or test-style decision, mirror the forker's stated rules verbatim.
+Fill the Implementation Guide template (from the companion templates pack) using the stack preferences extracted in Step A. Where the template offers a default (e.g. "PostgreSQL" or "Lucia"), check whether the forker's global names a different choice and substitute if so. Where the template asks for a comment-style or test-style decision, mirror the forker's stated rules verbatim.
 
 ### Step D — Draft the persona file
 
@@ -164,4 +164,4 @@ The doc you are reading is the contract. Read it. Hold the agent to it. Ship the
 
 ---
 
-*Personalization v1, Harshit Badiger, 2026-05-17. Companion to `./PRD.md` and `./BRAND.md`. The build agent should read this file before generating `templates/implementation-templates/IMPLEMENTATION_GUIDE.md`.*
+*Personalization v1, Harshit Badiger, 2026-05-17. Companion to `./PRD.md` and `./BRAND.md`. The build agent should read this file before generating the Implementation Guide for your fork.*

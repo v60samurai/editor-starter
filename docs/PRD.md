@@ -9,7 +9,7 @@
 
 This PRD is the **day-to-day** version of Editor. The forty-five-minute workshop variant lives at `docs/editor/PRD.md` in the rethink-enablement repo. This starter kit takes that workshop spine and adds the two features that turn a one-session demo into a tool you bookmark and open three times a day: **authentication** (so the app survives shared URLs and multi-device use) and **memory** (so you can find a critique from last Tuesday).
 
-The kit is meant to be **forked**. Drop this whole `editor-starter/` directory into a new repo, swap the six personalization slots, and ship your own version. The `templates/` folder alongside this PRD carries the blank PRD, brand-guide, and implementation templates so you can spin up new products without leaving the kit.
+The kit is meant to be **forked**. Drop this whole `editor-starter/` directory into a new repo, swap the six personalization slots, and ship your own version. The blank PRD, brand-guide, and implementation templates ship as a separate **companion templates pack** — see the README for the link.
 
 This is a lean PRD. Sections that would be required for a shipped commercial product (full user research, market sizing, competitive deep dive) are abbreviated because the goal of Editor Starter is to teach the next level of agentic building and give you a daily-useful baseline, not to compete in a market.
 
@@ -196,7 +196,7 @@ These are infrastructure, not new agentic patterns. They wrap the three features
 
 **What it does**: A `/login` page asks for an email. The user gets a magic link. Clicking the link creates a session that lasts thirty days. Sign out clears the session. The three editing routes (`/roast`, `/tighten`, `/voice-match`) refuse requests without a valid session.
 
-**Stack**: Lucia + Arctic + Oslo for session-based auth (matches the rest of the stack guidance in `templates/implementation-templates/IMPLEMENTATION_GUIDE.md`). PostgreSQL holds `users` and `sessions` tables. Magic links are sent via Resend (or any SMTP — adapter in `src/lib/email.ts`).
+**Stack**: Lucia + Arctic + Oslo for session-based auth (matches the rest of the stack guidance in the Implementation Guide template — companion templates pack). PostgreSQL holds `users` and `sessions` tables. Magic links are sent via Resend (or any SMTP — adapter in `src/lib/email.ts`).
 
 **Owner model**: Single-account-per-deploy by default. The first email that signs in becomes the owner. Additional sign-ins are rejected unless `AUTH_ALLOWED_EMAILS` env var lists them. This keeps the "personal tool" feel while permitting a small trusted circle.
 
@@ -258,7 +258,7 @@ Editor Starter depends on:
 - A voice corpus of three to five paragraphs the forker wrote themselves.
 - A PostgreSQL database. Neon's free tier is the default in `IMPLEMENTATION_GUIDE.md`; any Postgres works.
 - A transactional email provider for magic links. Resend's free tier is the default; any SMTP works via the adapter in `src/lib/email.ts`.
-- The build sequence at `templates/implementation-templates/SESSION_PLAYBOOK.md` adapted for Editor — auth lands in Session 3, memory in Session 4 alongside the core pipeline.
+- The build sequence from the Session Playbook (`SESSION_PLAYBOOK.md`, companion templates pack), adapted for Editor — auth lands in Session 3, memory in Session 4 alongside the core pipeline.
 
 ---
 
@@ -277,4 +277,4 @@ Editor Starter depends on:
 
 ---
 
-*Editor Starter PRD v2, Harshit Badiger, 2026-05-17. The brand sheet is at `docs/BRAND.md`. The implementation reference template is at `templates/implementation-templates/IMPLEMENTATION_GUIDE.md` — fill it in for your fork.*
+*Editor Starter PRD v2, Harshit Badiger, 2026-05-17. The brand sheet is at `docs/BRAND.md`. The Implementation Guide template (`IMPLEMENTATION_GUIDE.md` in the companion templates pack) is what you fill in for your fork.*
